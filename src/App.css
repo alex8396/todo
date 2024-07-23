@@ -1,38 +1,106 @@
 .App {
   text-align: center;
+  padding: 20px;
+  background-color: #1e1e1e;
+  /* 어두운 배경 */
+  color: #ffffff;
+  /* 흰색 텍스트 */
+  font-family: 'Arial', sans-serif;
+  /* 현대적인 폰트 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-container {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 12px;
+  font-size: 16px;
+  width: 220px;
+  border: 2px solid #4CAF50;
+  /* 밝은 초록색 테두리 */
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  /* 어두운 입력 필드 */
+  color: #ffffff;
+  /* 흰색 텍스트 */
+  transition: border-color 0.3s, transform 0.3s;
+  /* 테두리 색상 전환 및 변형 효과 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input:focus {
+  border-color: #76ff03;
+  /* 포커스 시 밝은 초록색으로 변경 */
+  outline: none;
+  /* 기본 아웃라인 제거 */
+  transform: scale(1.05);
+  /* 포커스 시 약간 확대 */
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  /* 밝은 초록색 버튼 */
   color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.3s;
+  /* 배경색 전환 및 변형 효과 */
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #76ff03;
+  /* 호버 시 밝은 초록색으로 변경 */
+  transform: translateY(-2px);
+  /* 호버 시 위로 살짝 이동 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #444;
+  /* 어두운 테두리 */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #292929;
+  /* 어두운 아이템 배경 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* 그림자 효과 */
+  transition: transform 0.2s, background-color 0.3s;
+  /* 전환 효과 */
+}
+
+li.todo-item:hover {
+  transform: scale(1.02);
+  /* 호버 시 약간 확대 */
+  background-color: #343434;
+  /* 호버 시 배경색 변경 */
+}
+
+li.todo-item button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: background-color 0.3s, transform 0.3s;
+  /* 배경색 전환 및 변형 효과 */
+}
+
+li.todo-item button:hover {
+  background-color: darkred;
+  /* 호버 시 어두운 빨간색으로 변경 */
+  transform: scale(1.1);
+  /* 버튼 호버 시 확대 */
 }
